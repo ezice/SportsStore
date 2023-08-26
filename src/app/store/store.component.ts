@@ -44,7 +44,7 @@ export class StoreComponent {
             .getProducts(this.selectedCategory).length / this.productsPerPage);
     }
 
-    addProductsToCart(product: Product) {
+    addProductToCart(product: Product) {
         this.cart.addLine(product);
     }
 }
