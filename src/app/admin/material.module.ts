@@ -5,9 +5,13 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 const features: any[] = [MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatDividerModule, MatButtonModule, MatTableModule];
+    MatDividerModule, MatButtonModule, MatTableModule, MatPaginatorModule,
+    MatFormFieldModule, MatInputModule];
 
 @NgModule({
     imports: [features],
