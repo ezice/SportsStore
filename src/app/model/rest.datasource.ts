@@ -50,7 +50,7 @@ export class RestDataSource {
     }
 
     getOrders(): Observable<Order[]> {
-        return this.http.get<Order[]>(this.baseUrl + "orders" + this.getOptions());
+        return this.http.get<Order[]>(this.baseUrl + "orders", this.getOptions());
     }
 
     deleteOrder(id: number): Observable<Order> {
@@ -64,6 +64,7 @@ export class RestDataSource {
     }
 
     private getOptions() {
+        console.log("auth_token = " + this.auth_token);
         return {
             headers: new HttpHeaders({
                 "Authorization": `Bearer<${this.auth_token}`
