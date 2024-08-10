@@ -6,7 +6,6 @@
 /out-tsc
 /bazel-out
 
-ngsw-config.json
 /public
 
 # Node
