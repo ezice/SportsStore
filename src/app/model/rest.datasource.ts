@@ -5,7 +5,7 @@ import { Product } from "./product.model";
 import { Order } from "./order.model";
 
 const PROTOCOL = "http";
-const PORT = 3500;
+const PORT = 8080;
 
 @Injectable()
 export class RestDataSource {
@@ -13,7 +13,9 @@ export class RestDataSource {
     auth_token?: string;
 
     constructor(private http: HttpClient) {
-        this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
+        // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
+        this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/api/`;
+        // this.baseUrl = "/api/";
     }
 
     getProducts(): Observable<Product[]> {
