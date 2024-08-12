@@ -5,11 +5,12 @@ import { Cart } from "./cart.model";
 import { Order } from "./order.model";
 import { OrderRepository } from "./order.repository";
 import { RestDataSource } from "./rest.datasource";
-import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+// import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { AuthService } from "./auth.service";
 import { ConnectionService } from "./connection.service";
 
-@NgModule({ imports: [], providers: [ProductRepository, StaticDataSource, Cart, Order, OrderRepository,
+@NgModule({ imports: [HttpClientModule], providers: [ProductRepository, StaticDataSource, Cart, Order, OrderRepository,
         { provide: StaticDataSource, useClass: RestDataSource },
         RestDataSource, AuthService, ConnectionService]
 })
